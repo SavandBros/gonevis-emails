@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>GoNevis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none !important;
+      display: inline-block;
+      color: #d17100;
+    }
+    
+    table {
+      width: 600px;
+      margin: 0 auto;
+    }
+    
+    table.main {
+      border: 1px solid #ddd;
+    }
+    
+    td {
+      color: #666;
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 20px;
+    }
+    
+    td.header {
+      background: #d17100;
+      width: 100%;
+      height: 80px;
+      text-align: center;
+    }
+
+    td.header a {
+      line-height: 80px;
+      color: #fff;
+      font-size: 25px;
+      border-bottom: #ddd;
+    }
+
+    td.image {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+    }
+    
+    td.image img {
+      display: block;
+      max-width: 100%;
+    }
+    
+    td.content-wrapper {
+      padding: 0 30px;
+      padding-bottom: 30px;
+    }
+    
+    td.content-wrapper .content {
+      padding: 50px 0;
+    }
+    
+    td.button {
+      text-align: center;
+    }
+    
+    td.button a {
+      background: #d17100;
+      border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+      color: #fff;
+      padding: 15px 25px;
+      padding-bottom: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+
+<body>
+  <table cellpadding="0" cellspacing="0" class="main">
+    <tr>
+      <td class="header">
+        <a href="https://{{ site.domain }}">GoNevis</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="content-wrapper">
+        <table>
+          <tr>
+            <td class="content">
+              You (or someone pretending to be you) have asked to
+              register an account at <a href="https://{{ site.domain }}">{{ site.name }}</a>. If this wasn't
+              you, please ignore this email and your address will be
+              removed from our records.
+              <br><br>
+              To continue registration process, please click the
+              following button within the next {{ expiration_days }} days:
+            </td>
+          </tr>
+          <tr>
+            <td class="button">
+              <!--[if mso]>
+              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+                xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com"
+                style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#bd6600" fillcolor="#d17100">
+                <w:anchorlock/>
+                <center style="color: #fff">CONFIRM</center>
+              </v:roundrect>
+              <![endif]-->
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
