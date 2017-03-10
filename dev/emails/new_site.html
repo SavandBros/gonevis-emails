@@ -6,7 +6,7 @@
   <title>GoNevis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
+    <style>
     body {
       margin: 0;
       padding: 0;
@@ -36,16 +36,27 @@
 
     td.header {
       background: #d17100;
-      width: 100%;
+      width: 100% !important;
       height: 80px;
       text-align: center;
+    }
+
+    td.footer {
+      background: #ddd;
+      width: 100% !important;
+      height: 80px;
+      text-align: center;
+    }
+
+    td.footer p {
+      line-height: 50px;
+      font-size: 14px;
     }
 
     td.header a {
       line-height: 80px;
       color: #fff;
       font-size: 25px;
-      border-bottom: #ddd;
     }
 
     td.image {
@@ -67,21 +78,6 @@
     td.content-wrapper .content {
       padding: 50px 0;
     }
-
-    td.button {
-      text-align: center;
-    }
-
-    td.button a {
-      background: #d17100;
-      border-bottom: 4px solid rgba(0, 0, 0, 0.1);
-      color: #fff;
-      padding: 15px 25px;
-      padding-bottom: 10px;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-
   </style>
 </head>
 
@@ -102,33 +98,20 @@
               Good news! You've successfully created a brand new website.
               <br><br>
               You can log in to your admin account with the following details:
-              <br><br>
+              <br><br><br>
               Dashboard: {{ dash_url }}
               <br><br>
               Username: {{ username }}
               <br><br>
               Password: The password you chose when you signed up
-              <br><br>
-              <3
-              <br><br>
-              Team GoNevis
-              <br><br>
-              {{ gonevis_site_url }}
-            </td>
-          </tr>
-          <tr>
-            <td class="button">
-              <!--[if mso]>
-              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
-                xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ site_url }}"
-                style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#bd6600" fillcolor="#d17100">
-                <w:anchorlock/>
-                <center style="color: #fff">VIEW SITE</center>
-              </v:roundrect>
-              <![endif]-->
             </td>
           </tr>
         </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer">
+        <p>Made by &hearts; and brought to you by GoNevis</p>
       </td>
     </tr>
   </table>
