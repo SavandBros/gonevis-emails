@@ -6,7 +6,7 @@
   <title>GoNevis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
+    <style>
     body {
       margin: 0;
       padding: 0;
@@ -36,16 +36,27 @@
 
     td.header {
       background: #d17100;
-      width: 100%;
+      width: 100% !important;
       height: 80px;
       text-align: center;
+    }
+
+    td.footer {
+      background: #ddd;
+      width: 100% !important;
+      height: 80px;
+      text-align: center;
+    }
+
+    td.footer a {
+      line-height: 80px;
+      font-size: 14px;
     }
 
     td.header a {
       line-height: 80px;
       color: #fff;
       font-size: 25px;
-      border-bottom: #ddd;
     }
 
     td.image {
@@ -73,15 +84,18 @@
     }
 
     td.button a {
-      background: #d17100;
-      border-bottom: 4px solid rgba(0, 0, 0, 0.1);
-      color: #fff;
-      padding: 15px 25px;
-      padding-bottom: 10px;
+      background-color: #d17100;
       border-radius: 4px;
-      font-weight: bold;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 44px;
+      text-align: center;
+      text-decoration: none;
+      padding: 5px 10px 5px 10px;
+      -webkit-text-size-adjust: none;
+      mso-hide: all;
     }
-
   </style>
 </head>
 
@@ -97,14 +111,28 @@
         <table>
           <tr>
             <td class="content">
+              <h3>{{ entry_title }}</h3>
+              <br>
               {{ entry_description }}...
-              <br><br><br>
-              Made by love and brought to you by GoNevis <3
-              <br><br>
-              Sent by: {{ gonevis_site_url }}
+            </td>
+          </tr>
+          <tr>
+            <td class="button">
+              <!--[if mso]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ entry_absolute_uri }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
+                  <w:anchorlock/>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">CONTINUE READING</center>
+                </v:roundrect>
+              <![endif]-->
+              <a href="{{ entry_absolute_uri }}">CONTINUE READING</a>
             </td>
           </tr>
         </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer">
+        <a href="{{ unsubscribe_url }}">Unsubscribe</a>
       </td>
     </tr>
   </table>
