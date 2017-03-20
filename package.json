@@ -8,7 +8,7 @@
     "start": "npm run lite"
   },
   "author": "Savand Bros",
-  "license": "GPL",
+  "license": "GPLv3",
   "devDependencies": {
     "lite-server": "^2.3.0"
   }
