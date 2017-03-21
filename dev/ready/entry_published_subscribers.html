@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>GoNevis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="margin: 0;padding: 0;">
+  <table cellpadding="0" cellspacing="0" class="main" style="width: 600px;margin: 0 auto;border: 1px solid #ddd;">
+    <tr>
+      <td class="header" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;background: #d17100;height: 80px;text-align: center;width: 100% !important;">
+        <a href="https://{{ site.domain }}" style="display: inline-block;color: #fff;line-height: 80px;font-size: 25px;text-decoration: none !important;">GoNevis</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="content-wrapper" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;padding: 0 30px;padding-bottom: 30px;">
+        <table style="width: 600px;margin: 0 auto;">
+          <tr>
+            <td class="content" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;padding: 50px 0;">
+              <h3>{{ entry_title }}</h3>
+              <br>
+              {{ entry_description }}...
+            </td>
+          </tr>
+          <tr>
+            <td class="button" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;text-align: center;">
+              <!--[if mso]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ entry_absolute_uri }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
+                  <w:anchorlock/>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">CONTINUE READING</center>
+                </v:roundrect>
+              <![endif]-->
+              <a href="{{ entry_absolute_uri }}" style="display: inline-block;color: #ffffff;background-color: #d17100;border-radius: 4px;font-size: 16px;line-height: 44px;text-align: center;text-decoration: none !important;padding: 5px 10px 5px 10px;-webkit-text-size-adjust: none;mso-hide: all;">CONTINUE READING</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;background: #ddd;height: 80px;text-align: center;width: 100% !important;">
+        <a href="{{ unsubscribe_url }}" style="display: inline-block;color: #d17100;line-height: 80px;font-size: 14px;text-decoration: none !important;">Unsubscribe</a>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
