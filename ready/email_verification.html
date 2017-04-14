@@ -19,20 +19,20 @@
         <table style="width: 600px;margin: 0 auto;">
           <tr>
             <td class="content" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;padding: 50px 0;">
-              Hello,
-              <br><br><br> You have asked to register an account at <b>{{ gonevis_site_name }}</b>
-              <br><br> You're in! Thanks for signing up for an account on GoNevis.com - to keep the dirty spammers out and make sure you're a human, please confirm email address within the next {{ expiration_days }}
+              {% trans "Hello" %},
+              <br><br>{% blocktrans %}You have asked to register an account at <b>{{ gonevis_site_name }}</b>{% endblocktrans %}
+              <br><br>{% blocktrans %}You're in! Thanks for signing up for an account on GoNevis.com - to keep the dirty spammers out and make sure you're a human, please confirm email address within the next {{ expiration_days }}{% endblocktrans %}
             </td>
           </tr>
-          <tr>
+          <tr>{% trans "CONFIRM" %}
             <td class="button" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;text-align: center;">
               <!--[if mso]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ confirmation_link }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
                   <w:anchorlock/>
-                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">CONFIRM</center>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">{% trans "CONFIRM" %}</center>
                 </v:roundrect>
               <![endif]-->
-              <a href="{{ confirmation_link }}" style="display: inline-block;color: #ffffff;background-color: #d17100;border-radius: 4px;font-size: 16px;line-height: 44px;text-align: center;text-decoration: none !important;width: 150px;-webkit-text-size-adjust: none;mso-hide: all;">CONFIRM</a>
+              <a href="{{ confirmation_link }}" style="display: inline-block;color: #ffffff;background-color: #d17100;border-radius: 4px;font-size: 16px;line-height: 44px;text-align: center;text-decoration: none !important;width: 150px;-webkit-text-size-adjust: none;mso-hide: all;">{% trans "CONFIRM" %}</a>
             </td>
           </tr>
         </table>
@@ -40,7 +40,7 @@
     </tr>
     <tr>
       <td class="footer" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;background: #ddd;height: 80px;text-align: center;width: 100% !important;">
-        <p style="line-height: 50px;font-size: 14px;">Made with &hearts; and brought to you by GoNevis</p>
+        <p style="line-height: 50px;font-size: 14px;">{% blocktrans %}Made with &hearts; and brought to you by GoNevis{% endblocktrans %}</p>
       </td>
     </tr>
   </table>
