@@ -93,17 +93,17 @@
         <table>
           <tr>
             <td class="content">
-              Hello,
+              {% trans "Hello" %},
               <br><br><br>
-              Good news! You've successfully created a brand new website.
+              {% blocktrans %}Good news! You've successfully created a brand new website.{% endblocktrans %}
               <br><br>
-              You can log in to your admin account with the following details:
+              {% blocktrans %}You can log in to your admin account with the following details:{% endblocktrans %}
               <br><br><br>
-              Dashboard: {{ dash_url }}
+              {% blocktrans %}Dashboard: {{ dash_url }}{% endblocktrans %}
               <br><br>
-              Username: {{ username }}
+              {% blocktrans %}Username: {{ username }}{% endblocktrans %}
               <br><br>
-              Password: The password you chose when you signed up
+              {% blocktrans %}Password: The password you chose when you signed up{% endblocktrans %}
             </td>
           </tr>
         </table>
@@ -111,7 +111,7 @@
     </tr>
     <tr>
       <td class="footer">
-        <p>Made with &hearts; and brought to you by GoNevis</p>
+        <p>{% blocktrans %}Made with &hearts; and brought to you by GoNevis{% endblocktrans %}</p>
       </td>
     </tr>
   </table>

@@ -111,20 +111,20 @@
         <table>
           <tr>
             <td class="content">
-              Hello,
-              <br><br><br> You have asked to register an account at <b>{{ gonevis_site_name }}</b>
-              <br><br> You're in! Thanks for signing up for an account on GoNevis.com - to keep the dirty spammers out and make sure you're a human, please confirm email address within the next {{ expiration_days }}
+              {% trans "Hello" %},
+              <br><br>{% blocktrans %}You have asked to register an account at <b>{{ gonevis_site_name }}</b>{% endblocktrans %}
+              <br><br>{% blocktrans %}You're in! Thanks for signing up for an account on GoNevis.com - to keep the dirty spammers out and make sure you're a human, please confirm email address within the next {{ expiration_days }}{% endblocktrans %}
             </td>
           </tr>
-          <tr>
+          <tr>{% trans "CONFIRM" %}
             <td class="button">
               <!--[if mso]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ confirmation_link }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
                   <w:anchorlock/>
-                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">CONFIRM</center>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">{% trans "CONFIRM" %}</center>
                 </v:roundrect>
               <![endif]-->
-              <a href="{{ confirmation_link }}">CONFIRM</a>
+              <a href="{{ confirmation_link }}">{% trans "CONFIRM" %}</a>
             </td>
           </tr>
         </table>
@@ -132,7 +132,7 @@
     </tr>
     <tr>
       <td class="footer">
-        <p>Made with &hearts; and brought to you by GoNevis</p>
+        <p>{% blocktrans %}Made with &hearts; and brought to you by GoNevis{% endblocktrans %}</p>
       </td>
     </tr>
   </table>

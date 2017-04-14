@@ -112,7 +112,7 @@
             <td class="content">
               {{ user_name }},
               <br><br><br>
-              {{ invited_by_name }} has given you access to <b>{{ site_name }}</b>.
+              {% blocktrans %}has given you access to <b>{{ site_name }}</b>.{% endblocktrans %}
             </td>
           </tr>
           <tr>
@@ -120,10 +120,10 @@
               <!--[if mso]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ site_url }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
                   <w:anchorlock/>
-                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">VIEW SITE</center>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">{% trans "VIEW SITE" %}</center>
                 </v:roundrect>
               <![endif]-->
-              <a href="{{ site_url }}">VIEW SITE</a>
+              <a href="{{ site_url }}">{% trans "VIEW SITE" %}</a>
             </td>
           </tr>
         </table>
@@ -131,7 +131,7 @@
     </tr>
     <tr>
       <td class="footer">
-        <p>Made with &hearts; and brought to you by GoNevis</p>
+        <p>{% blocktrans %}Made with &hearts; and brought to you by GoNevis{% endblocktrans %}</p>
       </td>
     </tr>
   </table>

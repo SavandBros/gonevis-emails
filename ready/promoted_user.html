@@ -21,7 +21,7 @@
             <td class="content" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;padding: 50px 0;">
               {{ user_name }},
               <br><br><br>
-              {{ invited_by_name }} has given you access to <b>{{ site_name }}</b>.
+              {% blocktrans %}has given you access to <b>{{ site_name }}</b>.{% endblocktrans %}
             </td>
           </tr>
           <tr>
@@ -29,10 +29,10 @@
               <!--[if mso]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ site_url }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
                   <w:anchorlock/>
-                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">VIEW SITE</center>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">{% trans "VIEW SITE" %}</center>
                 </v:roundrect>
               <![endif]-->
-              <a href="{{ site_url }}" style="display: inline-block;color: #ffffff;background-color: #d17100;border-radius: 4px;font-size: 16px;text-align: center;text-decoration: none !important;padding: 10px 20px 9px 20px;-webkit-text-size-adjust: none;mso-hide: all;">VIEW SITE</a>
+              <a href="{{ site_url }}" style="display: inline-block;color: #ffffff;background-color: #d17100;border-radius: 4px;font-size: 16px;text-align: center;text-decoration: none !important;padding: 10px 20px 9px 20px;-webkit-text-size-adjust: none;mso-hide: all;">{% trans "VIEW SITE" %}</a>
             </td>
           </tr>
         </table>
@@ -40,7 +40,7 @@
     </tr>
     <tr>
       <td class="footer" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;background: #ddd;height: 80px;text-align: center;width: 100% !important;">
-        <p style="line-height: 50px;font-size: 14px;">Made with &hearts; and brought to you by GoNevis</p>
+        <p style="line-height: 50px;font-size: 14px;">{% blocktrans %}Made with &hearts; and brought to you by GoNevis{% endblocktrans %}</p>
       </td>
     </tr>
   </table>
