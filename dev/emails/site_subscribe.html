@@ -111,12 +111,11 @@
         <table>
           <tr>
             <td class="content">
-              Hello {{ site_owner_name }},
+              {% blocktrans %}Hello {{ site_owner_name }},{% endblocktrans %}
               <br><br>
-              You got a new subscriber.
+              {% trans "You got a new subscriber." %}
               <br><br><br>
-              {{ subscriber_name }} subscribed to your site {{ site_title }} and started
-              following.
+              {% blocktrans %}{{ subscriber_name }} subscribed to your site {{ site_title }} and started following.{% endblocktrans %}
             </td>
           </tr>
         </table>
@@ -124,7 +123,7 @@
     </tr>
     <tr>
       <td class="footer">
-        <p>Made with &hearts; and brought to you by GoNevis</p>
+        <p>{% blocktrans %}Made with &hearts; and brought to you by GoNevis{% endblocktrans %}</p>
       </td>
     </tr>
   </table>
