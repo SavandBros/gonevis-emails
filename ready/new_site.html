@@ -19,17 +19,17 @@
         <table style="width: 600px;margin: 0 auto;">
           <tr>
             <td class="content" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;padding: 50px 0;">
-              Hello,
+              {% trans "Hello" %},
               <br><br><br>
-              Good news! You've successfully created a brand new website.
+              {% blocktrans %}Good news! You've successfully created a brand new website.{% endblocktrans %}
               <br><br>
-              You can log in to your admin account with the following details:
+              {% blocktrans %}You can log in to your admin account with the following details:{% endblocktrans %}
               <br><br><br>
-              Dashboard: {{ dash_url }}
+              {% blocktrans %}Dashboard: {{ dash_url }}{% endblocktrans %}
               <br><br>
-              Username: {{ username }}
+              {% blocktrans %}Username: {{ username }}{% endblocktrans %}
               <br><br>
-              Password: The password you chose when you signed up
+              {% blocktrans %}Password: The password you chose when you signed up{% endblocktrans %}
             </td>
           </tr>
         </table>
@@ -37,7 +37,7 @@
     </tr>
     <tr>
       <td class="footer" style="color: #666;font-family: Arial, sans-serif;font-size: 17px;line-height: 20px;background: #ddd;height: 80px;text-align: center;width: 100% !important;">
-        <p style="line-height: 50px;font-size: 14px;">Made with &hearts; and brought to you by GoNevis</p>
+        <p style="line-height: 50px;font-size: 14px;">{% blocktrans %}Made with &hearts; and brought to you by GoNevis{% endblocktrans %}</p>
       </td>
     </tr>
   </table>
