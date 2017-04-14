@@ -112,9 +112,8 @@
           <tr>
             <td class="content">
               <h1>{% blocktrans %}{{ user_name }} responded to "{{ object_title }}"{% endblocktrans %}</h1>
-              <br><br>
               <h2>{{ user_name }}</h2>
-              <br><br>
+              <br>
               {{ comment }}
             </td>
           </tr>
@@ -123,10 +122,10 @@
               <!--[if mso]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ comment_link }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
                   <w:anchorlock/>
-                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">VIEW ON SITE</center>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">{% trans "VIEW ON SITE" %}</center>
                 </v:roundrect>
               <![endif]-->
-              <a href="{{ comment_link }}">VIEW ON SITE</a>
+              <a href="{{ comment_link }}">{% trans "VIEW ON SITE" %}</a>
             </td>
           </tr>
         </table>
@@ -134,7 +133,7 @@
     </tr>
     <tr>
       <td class="footer">
-        <a href="{{ unsubscribe_url }}">Mute this thread</a>
+        <a href="{{ unsubscribe_url }}">{% trans "VIEW ON SITE" %}</a>
       </td>
     </tr>
   </table>
