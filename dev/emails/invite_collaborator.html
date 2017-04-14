@@ -111,16 +111,13 @@
         <table>
           <tr>
             <td class="content">
-              Welcome
+              {% trans "Welcome" %}
               <br><br>
-              {{ site_name }} is using GoNevis to publish things on the internet!
+              {% blocktrans %}{{ site_name }} is using GoNevis to publish things on the internet!{% endblocktrans %}
               <br><br>
-              {{ invited_by_name }} has invited you to join. Please click on the button
-              below to activate your account.
+              {% blocktrans %}{{ invited_by_name }} has invited you to join. Please click on the button below to activate your account.{% endblocktrans %}
               <br><br>
-              If you have trouble activating your {{ site_name }} account,
-              you can reach out to {{ invited_by_name }} on {{ invited_by_email }} for
-              assistance.
+              {% blocktrans %}If you have trouble activating your {{ site_name }} account, you can reach out to {{ invited_by_name }} on {{ invited_by_email }} for assistance.{% endblocktrans %}
             </td>
           </tr>
           <tr>
@@ -128,10 +125,10 @@
               <!--[if mso]>
                 <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ activate_account }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
                   <w:anchorlock/>
-                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">ACTIVATE ACCOUNT</center>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">{% trans "ACTIVATE ACCOUNT" %}</center>
                 </v:roundrect>
               <![endif]-->
-              <a href="{{ activate_account }}">ACTIVATE ACCOUNT</a>
+              <a href="{{ activate_account }}">{% trans "ACTIVATE ACCOUNT" %}</a>
             </td>
           </tr>
         </table>
@@ -139,7 +136,7 @@
     </tr>
     <tr>
       <td class="footer">
-        <p>Made with &hearts; and brought to you by GoNevis</p>
+        <p>{% blocktrans %}Made with &hearts; and brought to you by GoNevis{% endblocktrans %}</p>
       </td>
     </tr>
   </table>
