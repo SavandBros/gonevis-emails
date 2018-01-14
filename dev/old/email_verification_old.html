@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>GoNevis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none !important;
+      display: inline-block;
+      color: #d17100;
+    }
+
+    table {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    table.main {
+      border: 1px solid #ddd;
+    }
+
+    td {
+      color: #666;
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      line-height: 20px;
+    }
+
+    td.header {
+      background: #d17100;
+      width: 100% !important;
+      height: 80px;
+      text-align: center;
+    }
+
+    td.footer {
+      background: #ddd;
+      width: 100% !important;
+      height: 80px;
+      text-align: center;
+    }
+
+    td.footer p {
+      line-height: 50px;
+      font-size: 14px;
+    }
+
+    td.header a {
+      line-height: 80px;
+      color: #fff;
+      font-size: 25px;
+    }
+
+    td.image {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+    }
+
+    td.image img {
+      display: block;
+      max-width: 100%;
+    }
+
+    td.content-wrapper {
+      padding: 0 30px;
+      padding-bottom: 30px;
+    }
+
+    td.content-wrapper .content {
+      padding: 50px 0;
+    }
+
+    td.button {
+      text-align: center;
+    }
+
+    td.button a {
+      background-color: #d17100;
+      border-radius: 4px;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 16px;
+      line-height: 44px;
+      text-align: center;
+      text-decoration: none;
+      width: 150px;
+      -webkit-text-size-adjust: none;
+      mso-hide: all;
+    }
+  </style>
+</head>
+
+<body>
+  <table cellpadding="0" cellspacing="0" class="main">
+    <tr>
+      <td class="header">
+        <a href="https://{{ site.domain }}">GoNevis</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="content-wrapper">
+        <table>
+          <tr>
+            <td class="content">
+              Hello,
+              <br><br><br> You have asked to register an account at <b>{{ gonevis_site_name }}</b>
+              <br><br> You're in! Thanks for signing up for an account on GoNevis.com - to keep the dirty spammers out and make sure you're a human, please confirm email address within the next {{ expiration_days }}
+            </td>
+          </tr>
+          <tr>
+            <td class="button">
+              <!--[if mso]>
+                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ confirmation_link }}" style="height:36px;v-text-anchor:middle;width:150px;" arcsize="5%" strokecolor="#EB7035" fillcolor="#d17100">
+                  <w:anchorlock/>
+                  <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">CONFIRM</center>
+                </v:roundrect>
+              <![endif]-->
+              <a href="{{ confirmation_link }}">CONFIRM</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer">
+        <p>Made with &hearts; and brought to you by GoNevis</p>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
