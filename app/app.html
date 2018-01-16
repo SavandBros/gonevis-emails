@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" ng-app="gonevisEmails" ng-controller="AppController">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>GoNevis Emails</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css">
+
+  <!-- Scripts -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Size buttons -->
+    <div class="btn-group">
+      <button class="btn btn-light" ng-repeat="size in sizes"
+        ng-class="{active: size == currentSize}" ng-click="setSize(size)">{{ size }}
+      </button>
+    </div>
+
+    <!-- View buttons -->
+    <div class="btn-group">
+      <button class="btn btn-light" ng-repeat="view in views"
+        ng-class="{active: view == currentView}" ng-click="setView(view)">{{ view }}
+      </button>
+    </div>
+    
+    <!-- Email name -->
+    <div class="btn-group">
+      <input type="text" class="form-control" placeholder="Email name" ng-model="emailName">
+    </div>
+    
+    <!-- Save button -->
+    <div class="btn-group">
+      <a class="btn btn-light" download="{{ emailName }}"
+        ng-href="data:text/html;charset=utf-8,{{ getSource() }}">Save
+      </a>
+    </div>
+
+    <!-- Device -->
+    <div class="device {{ currentSize | lowercase }} {{ currentView | lowercase }}" style="height: {{ height }}">
+
+      <!-- Preview -->
+      <iframe ng-if="currentView == 'Preview'" srcdoc="{{ getPreview() }}"></iframe>
+
+      <!-- Source -->
+      <textarea ng-if="currentView == 'Source'" ng-value="getSource()" readonly></textarea>
+
+      <!-- Editor -->
+      <textarea ng-show="currentView == 'Editor'" ng-model="email"></textarea>
+    </div>
+
+  </div>
+</body>
+
+</html>
