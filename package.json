@@ -1,15 +1,12 @@
 {
-  "name": "gonevis-emails",
-  "version": "0.1.0",
-  "description": "The repository for GoNevis email templates.",
-  "main": "index.js",
   "scripts": {
-    "lite": "lite-server --port 9090",
-    "start": "npm run lite"
+    "start": "lite-server"
   },
-  "author": "Savand Bros",
-  "license": "GPLv3",
-  "devDependencies": {
+  "dependencies": {
+    "angular": "^1.6.8",
+    "bootstrap": "^4.0.0-beta.3",
+    "inline-css": "^2.2.3",
+    "jquery": "^3.2.1",
     "lite-server": "^2.3.0"
   }
 }
