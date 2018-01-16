@@ -13,6 +13,7 @@
   <!-- Scripts -->
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/markdown/lib/markdown.js"></script>
   <script src="app.js"></script>
 </head>
 
@@ -34,15 +35,10 @@
       </button>
     </div>
     
-    <!-- Email name -->
-    <div class="btn-group">
-      <input type="text" class="form-control" placeholder="Email name" ng-model="emailName">
-    </div>
-    
     <!-- Save button -->
     <div class="btn-group">
-      <a class="btn btn-light" download="{{ emailName }}"
-        ng-href="data:text/html;charset=utf-8,{{ getSource() }}">Save
+      <a class="btn btn-light" download="email"
+        ng-href="data:text/plain;charset=utf-8,{{ email }}">Save
       </a>
     </div>
 

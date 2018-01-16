@@ -15,7 +15,7 @@ app.controller("AppController", function ($scope, $sce, $http) {
     $scope.currentSize = $scope.sizes[0];
     $scope.currentView = $scope.views[0];
 
-    $scope.email = "<p>Hello world!</p><p>How are you?</p>";
+    $scope.email = "Hello world!\n\nHow are you?";
     $scope.source = "Loading...";
 
     $http.get("email.html").then(function (data) {
@@ -32,7 +32,7 @@ app.controller("AppController", function ($scope, $sce, $http) {
   };
 
   $scope.getSource = function (noStyle) {
-    return $scope.source.replace("<email-content-goes-here/>", $scope.email);
+    return $scope.source.replace("<email-content-goes-here/>", markdown.toHTML($scope.email));
   };
 
   $scope.getPreview = function () {
