@@ -13,7 +13,6 @@
   <!-- Scripts -->
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../node_modules/angular/angular.min.js"></script>
-  <script src="../node_modules/markdown/lib/markdown.js"></script>
   <script src="app.js"></script>
 </head>
 
@@ -32,6 +31,14 @@
     <div class="btn-group">
       <button class="btn btn-light" ng-repeat="view in views"
         ng-class="{active: view == currentView}" ng-click="setView(view)">{{ view }}
+      </button>
+    </div>
+
+    <!-- Mute button -->
+    <div class="btn-group">
+      <button class="btn btn-light" ng-click="mute = !mute" ng-class="{active: mute}" title="Email with mute link">
+        <span ng-if="mute">With Mute</span>
+        <span ng-if="!mute">No Mute</span>
       </button>
     </div>
     
