@@ -38,7 +38,7 @@ app.controller("AppController", function ($scope, $sce, $http) {
 
     // Include mute link
     if ($scope.mute) {
-      email += "\n\n<a class=\"mute\" href=\"{{ unsubscribe_url }}\">Mute this post</a>";
+      email += "\n<a class=\"mute\" href=\"{{ unsubscribe_url }}\">Mute this post</a>";
     }
 
     // Turn new lines to break lines
