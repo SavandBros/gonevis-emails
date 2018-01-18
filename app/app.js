@@ -32,7 +32,6 @@ app.controller("AppController", function ($scope, $sce, $http) {
   };
 
   $scope.getSource = function (noStyle) {
-    return $scope.source.replace("<email-content-goes-here/>", markdown.toHTML($scope.email));
   };
 
   $scope.getPreview = function () {
