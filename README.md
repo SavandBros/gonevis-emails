@@ -24,7 +24,7 @@ Making the CSS inlines is being taken care of when pulling them into backend rep
 
 Go to `localhost:3000/app/app.html` for the app.
 
-### License
+## License
 
 GoNevis Email Templates is distributed under GNU General Public License v3.0.
 You may find complete information about this licesne in the [LICENSE](LICENSE) file or https://www.gnu.org/licenses/gpl-3.0.en.html.
