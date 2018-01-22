@@ -7,7 +7,7 @@ None of the templates are suitable for sending unless css inlines and properly c
 
 Making the CSS inlines is being taken care of when pulling them into backend repository.
 
-#### Consider the following before making any changes:
+## Consider the following before making any changes:
 
 * All the text to user should be marked with `{% trans %}` or `{% blocktrans %}`.
 * The default language is English.
@@ -15,7 +15,17 @@ Making the CSS inlines is being taken care of when pulling them into backend rep
 * Don't rename the files or directories.
 * Don't attempt to write unit tests.
 
-#### License
+## Development
+
+```bash
+> npm install
+> npm run start
+```
+
+Go to `localhost:3000/app/app.html` for the app.
+
+### License
 
 GoNevis Email Templates is distributed under GNU General Public License v3.0.
 You may find complete information about this licesne in the [LICENSE](LICENSE) file or https://www.gnu.org/licenses/gpl-3.0.en.html.
+
