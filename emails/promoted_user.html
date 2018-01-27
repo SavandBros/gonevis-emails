@@ -341,10 +341,9 @@
 
 {{ user_name }}, 
 <br>
-<br>{% blocktrans %}{{ invited_by_name }} has given you access to {{ site_name }}.{% endblocktrans %}
+<br>{% blocktrans %}<a href="{{ invited_by_profile_url }}">{{ invited_by_name }}</a> has given you access to <a href="{{ site_url }}">{{ site_name }}</a>.{% endblocktrans %}
 <br>
 <br><a class="main-link" href="{{ site_url }}"><small>{% trans "View Site" %}</small></a>
-<br><a class="mute" href="{{ unsubscribe_url }}">{% trans "Mute this post" %}</a>
 
                     </td>
                   </tr>
