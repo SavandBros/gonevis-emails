@@ -343,12 +343,11 @@
 <br>
 <br>{% blocktrans %}{{ site_name }} is using GoNevis to publish things on the internet!{% endblocktrans %}
 <br>
-<br>{% blocktrans %}{{ invited_by_name }} has invited you to join. Please click on the button below to activate your account.{% endblocktrans %}
+<br>{% blocktrans %}<a href="{{ invited_by_profile_url }}">{{ invited_by_name }}</a> has invited you to join. Please click on the button below to activate your account.{% endblocktrans %}
 <br>
-<br>{% blocktrans %}If you have trouble activating your {{ site_name }} account, you can reach out to {{ invited_by_name }} on <a href="mailto:{{ invited_by_email }}">{{ invited_by_email }}</a> for assistance.{% endblocktrans %}
+<br>{% blocktrans %}If you have trouble activating your {{ site_name }} account, you can reach out to <a href="{{ invited_by_profile_url }}">{{ invited_by_name }}</a> on <a href="mailto:{{ invited_by_email }}">{{ invited_by_email }}</a> for assistance.{% endblocktrans %}
 <br>
 <br><a class="main-link" href="{{ activate_account }}"><small>{% trans "Activate Account" %}</small></a>
-<br><a class="mute" href="{{ unsubscribe_url }}">{% trans "Mute this post" %}</a>
 
                     </td>
                   </tr>
