@@ -134,7 +134,7 @@
     
     a {
       color: #d17100;
-      text-decoration: underline;
+      text-decoration: none !important;
     }
 
     a.main-link {
@@ -142,7 +142,7 @@
       font-size: 2em;
       display: block;
       width: 100%;
-      text-align: center;
+      text-align: center !important;
       text-decoration: none;
     }
 
@@ -344,7 +344,7 @@
 <br><blockquote>{{ comment }}</blockquote>
 <br>
 <br><a class="main-link" href="{{ comment_link }}"><small>{% trans "View Comment" %}</small></a>
-<br><a class="mute" href="{{ unsubscribe_url }}">{% trans "Mute this post" %}</a>
+<br><a class="mute" href="{{ unsubscribe_url }}">{% trans "Unsubscribe" %}</a>
 
                     </td>
                   </tr>
