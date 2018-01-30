@@ -134,7 +134,7 @@
     
     a {
       color: #d17100;
-      text-decoration: underline;
+      text-decoration: none !important;
     }
 
     a.main-link {
@@ -142,7 +142,7 @@
       font-size: 2em;
       display: block;
       width: 100%;
-      text-align: center;
+      text-align: center !important;
       text-decoration: none;
     }
 
@@ -343,7 +343,7 @@
 <br>{{ entry_description }}...
 <br>
 <br><a class="main-link" href="{{ entry_absolute_uri }}"><small>{% trans "Continue Reading" %}</small></a>
-<br><a class="mute" href="{{ unsubscribe_url }}">{% trans "Mute this post" %}</a>
+<br><a class="mute" href="{{ unsubscribe_url }}">{% trans "Unsubscribe" %}</a>
 
                     </td>
                   </tr>
